@@ -129,7 +129,7 @@ func Check(id string) (*IdInfo, bool, error) {
 	// 计算得到身份证号最后一位应该为：
 	lastValueShouldBe := referVal[afterSurp]
 	if lastValueShouldBe != strings.ToUpper(id[17:]) {
-		return nil, false, ErrInvalid
+		return nil, false, nil
 	}
 
 	return idInfo, true, nil
